@@ -1,0 +1,17 @@
+anti-sqli.php : bootstrap du plugin, chargement des classes/fonctions, hook d’intégrité.
+
+uninstall.php : suppression propre (options + table), requête durcie.
+
+admin/class-asi-admin.php : menus, settings, pages d’admin, export CSV, pagination (avec sanitization).
+
+admin/views/ : rendu HTML des pages d’admin (tableau, formulaires) → échappement partout.
+
+includes/class-asi-activator.php : création table + (éventuel) cron de purge.
+
+includes/class-asi-deactivator.php : nettoyage (désactivation).
+
+includes/class-asi-guard.php : filtrage des URLs (mini-WAF).
+
+includes/handlers.php : actions admin_post_* (ex: supprimer un log) → nonce + droits + sanitize + SQL formaté + redirection sûre.
+
+includes/helpers.php : utilitaires (affichage 403, whitelists, allowed HTML, lecture $_SERVER sanitisée…).

@@ -1,0 +1,33 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors/IDEs
+.vscode/
+.idea/
+*.iml
+*.code-workspace
+.project
+.settings/
+
+# Node (if you ever add builds)
+node_modules/
+dist/
+build/
+
+# Composer
+vendor/
+composer.lock
+
+# Logs
+*.log
+debug.log
+
+# Zips/archives
+*.zip
+
+# WordPress transient/output
+.sass-cache/
+cache/
+tmp/
+*.map
