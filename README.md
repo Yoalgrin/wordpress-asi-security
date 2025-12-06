@@ -1,6 +1,6 @@
 # ASI Security
 
-Protection contre SQLi, XSS (optionnel) et CSRF côté admin.
+ASI Security est un plugin WordPress d’apprentissage dédié à l’exploration de mécanismes de sécurité Web : détection de patterns SQLi, journalisation en base, vérification CSRF côté admin et gestion optionnelle d’un mode XSS.
 
 ## Contexte 
 J’ai commencé ce plugin comme exercice pour apprendre WordPress et la sécurité basique : détecter des patterns SQLi et bloquer.
