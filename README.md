@@ -3,10 +3,23 @@
 ASI Security est un plugin WordPress d’apprentissage dédié à l’exploration de mécanismes de sécurité Web : détection de patterns SQLi, journalisation en base, vérification CSRF côté admin et gestion optionnelle d’un mode XSS.
 
 ## Contexte 
-J’ai commencé ce plugin comme exercice pour apprendre WordPress et la sécurité basique : détecter des patterns SQLi et bloquer.
-En testant, j’ai constaté que la détection par regex seule n’est pas suffisante (faux positifs et contournements possibles).
-J’ai donc étendu le plugin pour ajouter : logs détaillés, whitelist IP/UA, vérifications CSRF côté admin, mode *log only* pour éviter d’interrompre des utilisateurs légitimes, et une page d’administration pour gérer ces réglages.  
-**Remarque** — Ce plugin est pédagogique et n’est pas un remplaçant d’un WAF ni d’une logique de sécurité côté base de données (`prepare()`, ORM) ou d’un reverse proxy type ModSecurity.
+Ce plugin a été initialement développé dans un cadre pédagogique pour comprendre :
+
+le fonctionnement interne des hooks WordPress,
+l’utilisation sécurisée de l’API wpdb,
+la validation/sanitization des entrées,
+et la mise en place d’un cycle de vie complet de plugin (activation / désinstallation propre).
+Au fil des tests, des limites ont été identifiées (regex insuffisantes, faux positifs…) et le plugin a été étendu avec :
+un système de logs détaillés en base,
+une whitelist IP / User-Agent,
+un mode “Log only”,
+une interface d’administration,
+
+plusieurs niveaux de sensibilité.
+
+⚠️ Note importante:
+
+Ce plugin est un outil pédagogique et ne remplace pas un WAF, un reverse proxy (ModSecurity) ou les mécanismes natifs de protection (requêtes préparées, ORM…). Il illustre des concepts, il ne cherche pas à couvrir l’ensemble des problématiques de sécurité WordPress.
 
 ## 🚀 Installation (développeur·euse)
 
